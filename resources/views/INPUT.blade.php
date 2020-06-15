@@ -10,7 +10,11 @@
     @csrf
     <p><b>Search:</b><br>
         <input type="text" name="videoName" size="40">
+        <input type="submit" value="Search">
     </p>
+</form>
+<form method="get" action="/liked">
+    <input type="submit" value="LikedList">
 </form>
 </body>
 </html>

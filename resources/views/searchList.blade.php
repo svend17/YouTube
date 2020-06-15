@@ -11,7 +11,9 @@
         <iframe width="400" height="320"
                 src="https://www.youtube.com/embed/{{$id}}">
         </iframe>
-        <input type="checkbox" name="video[]" value="{{$id}}" />
+        <label>
+            <input type="checkbox" name="video[]" value="{{$id}}" />
+        </label>
     @endforeach
     <input type="submit" name="LikedVideo" value="Liked Video List" />
 </form>

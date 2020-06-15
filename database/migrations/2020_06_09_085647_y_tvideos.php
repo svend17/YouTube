@@ -11,7 +11,7 @@ class YTvideos extends Migration
         Schema::create('videos', function (Blueprint $table){
             $table->id();
             $table->string('videoID')->unique();
-            $table->boolean('status')->default(false);
+            $table->boolean('status')->default(0)->nullable();
             $table->integer('query_id');
         });
     }
