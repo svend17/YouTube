@@ -1,0 +1,14 @@
+img
+{
+    width: 100px;
+}
+.vid
+{
+    width:auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+input[type=checkbox] {
+    transform: scale(2);
+}

@@ -10,6 +10,9 @@ use App\Video;
 
 class SearchController extends Controller{
     public function search(Request $request){
+        $request->validate([
+            'videoName'=>'required',
+        ]);
         $hist = history::where('query','=',$request->videoName)->first();
         if(!$hist){
             $results = Youtube::searchVideos($request->videoName);
