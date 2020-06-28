@@ -10,11 +10,17 @@
                 <iframe width="480" height="320"
                         src="https://www.youtube.com/embed/{{$id}}">
                 </iframe>
-                <input size="20" type="checkbox" name="video[]" value="{{$id}}" />
+                @guest
+                @else
+                    <input size="20" type="checkbox" name="video[]" value="{{$id}}" />
+                @endguest
             </div>
         @endforeach
     </div>
-    <input class="btn btn-primary ml-5" type="submit" name="LikedVideo" value="Liked Video List" />
+    @guest
+    @else
+        <input class="btn btn-primary ml-5" type="submit" name="LikedVideo" value="Liked Video List" />
+    @endguest
 </form>
 </body>
 @endsection

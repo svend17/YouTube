@@ -15,4 +15,5 @@ Route::post('/list','SearchController@search')->name('sList');
 Route::post('/liked', 'StatusVideo@updStatus')->name('upd')->middleware('auth');
 Route::post('/liked1', 'LikedVideos@likedList')->name('del');
 
-Auth::routes();
+//Auth::routes();
+Auth::routes(['verify' => true]);
